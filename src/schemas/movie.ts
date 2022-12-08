@@ -10,5 +10,8 @@ export const MovieDetail = yup.object().shape({
     id: yup.number(),
     name: yup.string().required(),
     ratings: yup.number().min(0).max(100).required(),
-    durationInHours: yup.string().matches(durationFormat, 'Please specify the time in hours or minutes (e.g. 2.5h or 150m)').required(),
+    durationInHours: yup
+        .string()
+        .matches(durationFormat, 'Please specify the time in hours or minutes (e.g. 2.5h or 150m)')
+        .required(),
 });

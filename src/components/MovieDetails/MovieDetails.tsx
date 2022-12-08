@@ -26,7 +26,7 @@ export const MovieDetails = ({ id: currentMovieId, existingMovie }: MovieDetails
     const formMethods = useForm({
         defaultValues: { ...(emptyMovieData as FieldValues) },
         resolver: yupResolver(MovieDetail),
-        mode: 'all'
+        mode: 'all',
     });
 
     const createMovieMutation = useCreateMovieMutation();
@@ -66,7 +66,7 @@ export const MovieDetails = ({ id: currentMovieId, existingMovie }: MovieDetails
             createMovieMutation.mutate(data, {
                 onSuccess: () => {
                     router.push('/movies');
-                }
+                },
             });
         }
     };

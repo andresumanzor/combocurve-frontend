@@ -36,13 +36,11 @@ export const Table = <T,>({ data, currentPage, setCurrentPage, columnsComponents
             <div className="flex justify-center pt-[40px]">
                 <span>No Results Found</span>
             </div>
-        )
+        );
     }
 
     if (!tableData) {
-        return (
-            <Spinner />
-        );
+        return <Spinner />;
     }
 
     return (

@@ -30,8 +30,7 @@ const InputWithTitle = ({
         formState: { errors },
     } = useFormContext();
 
-    const errorObject =
-        errors[fieldName];
+    const errorObject = errors[fieldName];
 
     return (
         <div className="flex flex-col">

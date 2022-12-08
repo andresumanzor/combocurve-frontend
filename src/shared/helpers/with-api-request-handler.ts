@@ -6,11 +6,7 @@ interface WithApiRequestHandlerOptions {
     put?: NextApiHandler;
 }
 
-const supportedMethods = [
-    'GET',
-    'POST',
-    'PUT',
-]
+const supportedMethods = ['GET', 'POST', 'PUT'];
 
 export const withApiRequestHandler =
     (options: WithApiRequestHandlerOptions): NextApiHandler =>
